@@ -30,6 +30,15 @@ describe 'IdentificadorDeOpciones' do
     expect(identificador_de_opciones.sort).to eq "--SORT:ASC"
    end
 
+  it 'deberia retornar "--OUTPUT-FILE:ARCHIVOSALIDA.TXT" cuando output' do
+    argumentos = [0, "--FORMAT=PRETTY", "--SORT:ASC", "--OUTPUT-FILE:ARCHIVOSALIDA.TXT"]
+    identificador_de_opciones = IdentificadorDeOpciones.new(argumentos)
+
+    identificador_de_opciones.identificar_opciones()
+    
+    expect(identificador_de_opciones.output).to eq "--OUTPUT-FILE:ARCHIVOSALIDA.TXT"
+   end
+
 end
 
 
