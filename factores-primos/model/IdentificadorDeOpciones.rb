@@ -15,7 +15,7 @@ class IdentificadorDeOpciones
 		@numero_a_factorizar = @argumentos[0]
 		for indice in 1...@argumentos.length do
 			
-			parametro_a_evaluar = @argumentos[indice][0, 3] 
+			parametro_a_evaluar = @argumentos[indice][0, 3].upcase 
 			case parametro_a_evaluar
 				when "--F"
 					@format = @argumentos[indice]
