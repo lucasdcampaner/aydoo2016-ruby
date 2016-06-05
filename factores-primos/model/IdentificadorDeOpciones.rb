@@ -14,9 +14,16 @@ class IdentificadorDeOpciones
 		
 		@numero_a_factorizar = @argumentos[0]
 		for indice in 1...@argumentos.length do
-			@format = @argumentos[1]
-			@sort = @argumentos[2]
-			@output = @argumentos[3]
+			
+			parametro_a_evaluar = @argumentos[indice][0, 3] 
+			case parametro_a_evaluar
+				when "--F"
+					@format = @argumentos[indice]
+				when "--S"
+			  		@sort = @argumentos[indice]
+				when "--O"
+			  		@output = @argumentos[indice]
+			end
 		end
 	end
 	
