@@ -46,14 +46,15 @@ class ImpresorEnFormatos
 
 		case sort.upcase 
 		when "--SORT:ASC"
-			lista_de_factores_primos.sort
+			lista_de_factores_primos.sort!
 		when "--SORT:DES"
-			lista_de_factores_primos.sort.reverse
+			lista_de_factores_primos.reverse!
 		else
-			lista_de_factores_primos.sort
+			lista_de_factores_primos.sort!
 		end
 
 		return lista_de_factores_primos
 	end
 
 end
+
