@@ -8,10 +8,11 @@ describe 'Integracion' do
   it 'deberia imprimir por pantalla en formato pretty y en orden ascendente cuando get_impresion_resultante' do
 
     numero_a_factorizar = 360
-    argumentos = [360]
+    argumentos = [numero_a_factorizar]
     identificador_de_opciones = IdentificadorDeOpciones.new(argumentos)
+    identificador_de_opciones.identificar_opciones()
     descomponedor_en_factores = DescomponedorEnFactores.new
-    lista_de_factores_primos = descomponedor_en_factores.descomponer_en_factores_primos(numero_a_factorizar)
+    lista_de_factores_primos = descomponedor_en_factores.descomponer_en_factores_primos(identificador_de_opciones.numero_a_factorizar)
     impresor_en_formatos = ImpresorEnFormatos.new
     impresion_esperada = "Factores primos 360: 2 2 2 3 3 5 "
         
@@ -21,3 +22,9 @@ describe 'Integracion' do
    end
 
 end
+
+
+
+
+    
+    
