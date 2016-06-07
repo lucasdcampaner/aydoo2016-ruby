@@ -3,7 +3,7 @@ class IdentificadorDeOpciones
 	@argumentos = []
 	@numero_a_factorizar = 0
 	@format = ""
-	@sort = "";
+	@sort = ""
 	@output = ""
 	
 	def initialize(argumentos)     
