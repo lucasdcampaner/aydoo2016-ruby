@@ -2,12 +2,15 @@ class IdentificadorDeOpciones
 
 	@argumentos = []
 	@numero_a_factorizar = 0
-	@format = ""
-	@sort = ""
-	@output = ""
+	@format
+	@sort
+	@output
 	
 	def initialize(argumentos)     
     	@argumentos = argumentos    
+    	@format = "--FORMAT=PRETTY"
+  		@sort = "--SORT:ASC"
+  		@output = "sinOutput"
   	end
 
 	def identificar_opciones()
@@ -31,16 +34,16 @@ class IdentificadorDeOpciones
     	@numero_a_factorizar
   	end
 
-  	def format
-    	@format
+  	def format	
+		@format
   	end
 
 	def sort
-    	@sort
+  		@sort
   	end
 
   	def output
-    	@output
+		@output
   	end  	
 
 end
