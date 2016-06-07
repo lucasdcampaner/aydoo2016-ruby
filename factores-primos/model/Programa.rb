@@ -1,6 +1,7 @@
 require_relative '../model/IdentificadorDeOpciones'
 require_relative '../model/DescomponedorEnFactores'
 require_relative '../model/ImpresorEnFormatos'
+require_relative '../model/PersistidorEnArchivo'
 
 class Programa
 
